@@ -1,0 +1,13 @@
+//
+//  Common.xcconfig
+//  signator
+//
+//  Created by Mehul Bhavani on 12/24/21.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+CURRENT_PROJECT_VERSION = 211223
+MARKETING_VERSION = 1.0
+COPYRIGHT_INFO = Copyright © 2019-21 MehulB. All rights reserved.
