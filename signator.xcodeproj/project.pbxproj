@@ -455,6 +455,7 @@
 		};
 		28AE39F62775DD7D007F8567 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28AE39E42775216F007F8567 /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "finder-sync/finder_sync.entitlements";
@@ -472,7 +473,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "in.mehulb.signator.finder-sync";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -484,6 +485,7 @@
 		};
 		28AE39F72775DD7D007F8567 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28AE39E52775217F007F8567 /* Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "finder-sync/finder_sync.entitlements";
@@ -501,7 +503,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "in.mehulb.signator.finder-sync";
 				PRODUCT_NAME = "$(TARGET_NAME)";
