@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28761E3627A99C6600819529 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28761E3527A99C6600819529 /* Logger.swift */; };
+		28A78D572794067F00A5E72D /* CommandCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A78D562794067F00A5E72D /* CommandCenter.swift */; };
+		28A78D5B27940EC300A5E72D /* CommandsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A78D5A27940EC300A5E72D /* CommandsController.swift */; };
+		28A78D5D2794BA1200A5E72D /* AddCommandWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A78D5C2794BA1200A5E72D /* AddCommandWindowController.swift */; };
 		28AE39CF27751F1E007F8567 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AE39CE27751F1E007F8567 /* AppDelegate.swift */; };
 		28AE39D127751F1E007F8567 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AE39D027751F1E007F8567 /* ViewController.swift */; };
 		28AE39D327751F20007F8567 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28AE39D227751F20007F8567 /* Assets.xcassets */; };
@@ -44,6 +48,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		28761E3527A99C6600819529 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		28A78D562794067F00A5E72D /* CommandCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandCenter.swift; sourceTree = "<group>"; };
+		28A78D5A27940EC300A5E72D /* CommandsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandsController.swift; sourceTree = "<group>"; };
+		28A78D5C2794BA1200A5E72D /* AddCommandWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommandWindowController.swift; sourceTree = "<group>"; };
 		28AE39CB27751F1E007F8567 /* Signator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Signator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28AE39CE27751F1E007F8567 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28AE39D027751F1E007F8567 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,10 +112,14 @@
 			isa = PBXGroup;
 			children = (
 				28AE39CE27751F1E007F8567 /* AppDelegate.swift */,
-				28AE39DF27751F5F007F8567 /* Signator.swift */,
 				28AE39DD27751F49007F8567 /* DDView.swift */,
 				28AE39E127751F85007F8567 /* WindowsManager.swift */,
 				28AE39D027751F1E007F8567 /* ViewController.swift */,
+				28A78D562794067F00A5E72D /* CommandCenter.swift */,
+				28AE39DF27751F5F007F8567 /* Signator.swift */,
+				28A78D5A27940EC300A5E72D /* CommandsController.swift */,
+				28A78D5C2794BA1200A5E72D /* AddCommandWindowController.swift */,
+				28761E3527A99C6600819529 /* Logger.swift */,
 			);
 			path = signator;
 			sourceTree = "<group>";
@@ -242,7 +254,11 @@
 				28AE39DE27751F49007F8567 /* DDView.swift in Sources */,
 				28AE39D127751F1E007F8567 /* ViewController.swift in Sources */,
 				28AE39CF27751F1E007F8567 /* AppDelegate.swift in Sources */,
+				28761E3627A99C6600819529 /* Logger.swift in Sources */,
+				28A78D572794067F00A5E72D /* CommandCenter.swift in Sources */,
 				28AE39E227751F85007F8567 /* WindowsManager.swift in Sources */,
+				28A78D5D2794BA1200A5E72D /* AddCommandWindowController.swift in Sources */,
+				28A78D5B27940EC300A5E72D /* CommandsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,7 +424,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = signator/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Signator;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "$(COPYRIGHT_INFO)";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2019-21 MehulB. All rights reserved.";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -438,7 +455,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = signator/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Signator;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "$(COPYRIGHT_INFO)";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2019-21 MehulB. All rights reserved.";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -461,7 +479,6 @@
 				CODE_SIGN_ENTITLEMENTS = "finder-sync/finder_sync.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 638CAR2KDN;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -474,7 +491,6 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "in.mehulb.signator.finder-sync";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -491,7 +507,6 @@
 				CODE_SIGN_ENTITLEMENTS = "finder-sync/finder_sync.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 638CAR2KDN;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -504,7 +519,6 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "in.mehulb.signator.finder-sync";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
