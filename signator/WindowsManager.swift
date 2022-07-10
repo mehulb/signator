@@ -35,14 +35,14 @@ class WindowsManager {
     
     func pushEmpty() {
         let storyboard = NSStoryboard(name: "Main", bundle: nil)
-        if let windowController = storyboard.instantiateController(withIdentifier: "WindowController") as? NSWindowController {
+        if let windowController = storyboard.instantiateController(withIdentifier: "\(WindowController.self)") as? WindowController {
             windowController.showWindow(self)
             push(windowController)
         }
     }
     func push(forFilepath path: String) {
         let storyboard = NSStoryboard(name: "Main", bundle: nil)
-        if let windowController = storyboard.instantiateController(withIdentifier: "WindowController") as? NSWindowController {
+        if let windowController = storyboard.instantiateController(withIdentifier: "\(WindowController.self)") as? WindowController {
             windowController.showWindow(self)
             push(windowController)
             if let viewController = windowController.contentViewController as? ViewController {

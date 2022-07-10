@@ -8,13 +8,13 @@
 import Foundation
 
 enum SignatorError: Error {
-    case SignErr(_ errMsg: String)
+    case InvalidFilePath
+    case UpdateBlockMissing
+    case CompletionBlockMissing
+    case msg(_ : String)
 }
 
 class Signator {
-//    private init() {}
-//    static let shared = Signator()
-    
     typealias CodeBlock = (String?, String?, Error?) -> Void
     
     var fileInfo: FileInfo
@@ -83,12 +83,13 @@ class Signator {
             
             update("codesign -dvvvv", result.message, nil)
         }
+        completionBlock(nil, nil, nil)
     }
 }
 
 extension Signator {
     private func runShellCommand(withLaunchPath launchPath: String, arguments: [String], timeout: TimeInterval = 0) -> (status: Bool, message: String) {
-        print("CMD: \(launchPath) \(arguments)")
+        Logger.info("CMD: \(launchPath) \(arguments)")
         
         var _status = true
         var _message = ""
@@ -122,7 +123,7 @@ extension Signator {
             _message = msg
         }
         
-        print("STS: \(_status)\nMSG: \(_message)")
+        Logger.info("STS: \(_status)\nMSG: \(_message)")
         return (_status, _message)
     }
 }
@@ -131,7 +132,7 @@ extension Process {
     func waitUntil(futureDate: Date) {
         while self.isRunning {
             if Date() > futureDate {
-                print("ERR: task taking too long, terminate!")
+                Logger.info("ERR: task taking too long, terminate!")
                 self.terminate()
             }
             Thread.sleep(forTimeInterval: 1.0)

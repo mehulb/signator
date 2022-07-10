@@ -36,7 +36,7 @@ class ViewController: NSViewController {
         super.viewDidLoad()
 
         (self.view as! DDView).didDropFile { (filePath) in
-            print("Dropped path: \(filePath)")
+            Logger.info(filePath)
             self.check(filePath)
         }
     }
@@ -87,7 +87,9 @@ class ViewController: NSViewController {
             self.quarantineCheckBox.state = signator.fileInfo.extendedAttributes.contains("com.apple.quarantine") ? .on : .off
         }
     }
-    
+}
+
+extension ViewController {
     private func appendCmd(_ cmd: String) {
         var attributes: [NSAttributedString.Key: Any]
         attributes = [.font: NSFont(name: "Courier", size: 14)!, .foregroundColor: NSColor.secondaryLabelColor]

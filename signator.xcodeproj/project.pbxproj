@@ -251,6 +251,8 @@
 				28AE39DE27751F49007F8567 /* DDView.swift in Sources */,
 				28AE39D127751F1E007F8567 /* ViewController.swift in Sources */,
 				28AE39CF27751F1E007F8567 /* AppDelegate.swift in Sources */,
+				28761E3627A99C6600819529 /* Logger.swift in Sources */,
+				28A78D572794067F00A5E72D /* CommandCenter.swift in Sources */,
 				28AE39E227751F85007F8567 /* WindowsManager.swift in Sources */,
 				28D7D06A2878A86E002AFA37 /* PListInfo.swift in Sources */,
 			);
