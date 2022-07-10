@@ -36,7 +36,7 @@ class ViewController: NSViewController {
         super.viewDidLoad()
 
         (self.view as! DDView).didDropFile { (filePath) in
-            Logger.info(filePath)
+            print(filePath)
             self.check(filePath)
         }
     }

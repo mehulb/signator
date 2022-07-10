@@ -10,7 +10,7 @@ import Cocoa
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
     
-    private var cmdsWindowController: CommandsWindowController?
+//    private var cmdsWindowController: CommandsWindowController?
     
     func applicationWillFinishLaunching(_ notification: Notification) {
         NSAppleEventManager.shared().setEventHandler(self, andSelector: #selector(handleURL(event:reply:)), forEventClass: AEEventClass(kInternetEventClass), andEventID: AEEventID(kAEGetURL))
@@ -65,15 +65,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @IBAction func commandsMenuItem_Clicked(_ item: Any) {
-        if cmdsWindowController == nil {
-            let storyboard = NSStoryboard(name: "Main", bundle: nil)
-            if let windowController = storyboard.instantiateController(withIdentifier: "\(CommandsWindowController.self)") as? CommandsWindowController {
-                cmdsWindowController = windowController
-            }
-        }
-        if let cmdsWindowController = cmdsWindowController {
-            cmdsWindowController.showWindow(self)
-        }
+//        if cmdsWindowController == nil {
+//            let storyboard = NSStoryboard(name: "Main", bundle: nil)
+//            if let windowController = storyboard.instantiateController(withIdentifier: "\(CommandsWindowController.self)") as? CommandsWindowController {
+//                cmdsWindowController = windowController
+//            }
+//        }
+//        if let cmdsWindowController = cmdsWindowController {
+//            cmdsWindowController.showWindow(self)
+//        }
     }
 }
 

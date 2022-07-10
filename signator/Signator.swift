@@ -83,13 +83,12 @@ class Signator {
             
             update("codesign -dvvvv", result.message, nil)
         }
-        completionBlock(nil, nil, nil)
     }
 }
 
 extension Signator {
     private func runShellCommand(withLaunchPath launchPath: String, arguments: [String], timeout: TimeInterval = 0) -> (status: Bool, message: String) {
-        Logger.info("CMD: \(launchPath) \(arguments)")
+        print("CMD: \(launchPath) \(arguments)")
         
         var _status = true
         var _message = ""
@@ -123,7 +122,7 @@ extension Signator {
             _message = msg
         }
         
-        Logger.info("STS: \(_status)\nMSG: \(_message)")
+        print("STS: \(_status)\nMSG: \(_message)")
         return (_status, _message)
     }
 }
@@ -132,7 +131,7 @@ extension Process {
     func waitUntil(futureDate: Date) {
         while self.isRunning {
             if Date() > futureDate {
-                Logger.info("ERR: task taking too long, terminate!")
+                print("ERR: task taking too long, terminate!")
                 self.terminate()
             }
             Thread.sleep(forTimeInterval: 1.0)
