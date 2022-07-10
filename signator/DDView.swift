@@ -34,7 +34,7 @@ class DDView: NSView {
         showMessageLabel()
         let result = checkExtension(sender)
         if result.0 {
-            messageLabel?.stringValue = "Drop the \"\(result.1)\" here!"
+            messageLabel?.stringValue = "Drop \"\(result.1)\" here!"
             return .copy
         } else {
             messageLabel?.stringValue = "Invalid file format!"

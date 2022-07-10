@@ -8,6 +8,6 @@
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
 
-CURRENT_PROJECT_VERSION = 211224
-MARKETING_VERSION = 1.0
-COPYRIGHT_INFO = Copyright © 2019-21 MehulB. All rights reserved.
+CURRENT_PROJECT_VERSION = 220710
+MARKETING_VERSION = 3.0
+COPYRIGHT_INFO = Copyright © 2019-22 mehulb. All rights reserved.
